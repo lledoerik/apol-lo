@@ -1,26 +1,26 @@
-# QuietSignal
+# Apol·lo
 
-By Aurora Minds
+Diari Emocional
 
-## Descripcio
+## Descripció
 
-QuietSignal es un projecte centrat en la salut mental i emocional, que identifica l'estat emocional de l'usuari a partir de text mitjancant models avancats de xarxes neuronals.
+Apol·lo és un projecte centrat en la salut mental i emocional, que identifica l'estat emocional de l'usuari a partir de text mitjançant models avançats de xarxes neuronals.
 
-El sistema permet als usuaris crear diaris personals, escriure entrades i obtenir analisis automatiques del sentiment emocional del seu contingut.
+El sistema permet als usuaris crear diaris personals, escriure entrades i obtenir anàlisis automàtiques del sentiment emocional del seu contingut.
 
-## Caracteristiques
+## Característiques
 
-- Autenticacio segura amb JWT
-- Gestio de diaris i entrades
-- Analisi de sentiments en temps real (positiu, neutral, negatiu)
-- Control d'acces basat en rols
+- Autenticació segura amb JWT
+- Gestió de diaris i entrades
+- Anàlisi de sentiments en temps real (positiu, neutral, negatiu)
+- Control d'accés basat en rols
 - API RESTful documentada amb OpenAPI
 
-## Stack Tecnologic
+## Stack Tecnològic
 
 ### Frontend
 
-| Tecnologia | Versio | Descripcio |
+| Tecnologia | Versió | Descripció |
 |------------|--------|------------|
 | React | 19.x | Biblioteca UI |
 | Vite | 7.x | Build tool |
@@ -30,19 +30,19 @@ El sistema permet als usuaris crear diaris personals, escriure entrades i obteni
 
 ### Backend
 
-| Tecnologia | Versio | Descripcio |
+| Tecnologia | Versió | Descripció |
 |------------|--------|------------|
 | FastAPI | Latest | Framework web |
-| Python | 3.10+ | Llenguatge |
+| Python | 3.13+ | Llenguatge |
 | SQLAlchemy | Latest | ORM |
 | MySQL | 8.0+ | Base de dades |
 | scikit-learn | Latest | Machine Learning |
-| PyJWT | Latest | Autenticacio |
+| PyJWT | Latest | Autenticació |
 
 ## Estructura del Projecte
 
 ```
-aurora-minds/
+apollo/
     frontend/
         src/
             api/
@@ -52,7 +52,7 @@ aurora-minds/
         public/
         package.json
     backend/
-        src/quietsignal_backend/
+        src/apollo_backend/
             api/
             services/
             models/
@@ -70,12 +70,12 @@ aurora-minds/
     README.md
 ```
 
-## Installacio
+## Instal·lació
 
 ### Requisits
 
 - Node.js 18+
-- Python 3.10 - 3.13
+- Python 3.13+
 - MySQL 8.0+
 - uv (gestor de paquets Python)
 
@@ -97,41 +97,39 @@ MYSQL_USER=your_user
 MYSQL_PASSWORD=your_password
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
-MYSQL_DB=quietsignal
+MYSQL_DB=apollo
 ```
 
 Executar:
 
 ```bash
-uv run uvicorn quietsignal_backend.main:app --reload
+./start-backend.sh
 ```
 
 ### Frontend
 
 ```bash
-cd frontend
-npm install
-npm run dev
+./start-frontend.sh
 ```
 
-## Documentacio
+## Documentació
 
-| Document | Descripcio |
+| Document | Descripció |
 |----------|------------|
-| [API](docs/API.md) | Referencia completa dels endpoints |
+| [API](docs/API.md) | Referència completa dels endpoints |
 | [Arquitectura](docs/ARQUITECTURA.md) | Estructura i patrons del sistema |
 | [Diagrames](docs/DIAGRAMES.md) | Diagrames UML, ER i wireframes |
-| [Disseny UI](docs/DISSENY_UI.md) | Especificacions de la interficie |
-| [Installacio](docs/INSTALLACIO.md) | Guia detallada de configuracio |
+| [Disseny UI](docs/DISSENY_UI.md) | Especificacions de la interfície |
+| [Instal·lació](docs/INSTALLACIO.md) | Guia detallada de configuració |
 | [Model de Dades](docs/MODEL_DADES.md) | Esquema de la base de dades |
 
 ## API Endpoints
 
-| Metode | Ruta | Descripcio |
+| Mètode | Ruta | Descripció |
 |--------|------|------------|
 | POST | /auth/register | Registre d'usuari |
-| POST | /auth/login | Autenticacio |
-| POST | /auth/logout | Tancar sessio |
+| POST | /auth/login | Autenticació |
+| POST | /auth/logout | Tancar sessió |
 | GET | /auth/me | Usuari actual |
 | POST | /analyze | Analitzar sentiment |
 | GET | /journals | Llistar diaris |

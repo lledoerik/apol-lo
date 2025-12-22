@@ -1,6 +1,6 @@
 # Disseny de la Interficie d'Usuari
 
-Aquest document descriu els wireframes i especificacions de la interficie d'usuari de QuietSignal.
+Aquest document descriu els wireframes i especificacions de la interficie d'usuari de Apol·lo.
 
 ## Visio General
 

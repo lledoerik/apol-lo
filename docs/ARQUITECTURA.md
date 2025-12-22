@@ -1,10 +1,10 @@
 # Arquitectura del Sistema
 
-Aquest document descriu l'arquitectura de QuietSignal, incloent els diagrames de classes, casos d'us i l'estructura logica del sistema.
+Aquest document descriu l'arquitectura de Apol·lo, incloent els diagrames de classes, casos d'us i l'estructura logica del sistema.
 
 ## Visio General
 
-QuietSignal segueix una arquitectura de tres capes:
+Apol·lo segueix una arquitectura de tres capes:
 
 ```
 Capa de Presentacio (Frontend)
@@ -129,7 +129,7 @@ src/
 ### Capa de Negoci (Backend)
 
 ```
-src/quietsignal_backend/
+src/apollo_backend/
     api/
         authRoutes.py    Endpoints d'autenticacio
         analyzeRoutes.py Endpoints d'analisi

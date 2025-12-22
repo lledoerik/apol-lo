@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /home/sonwerik/Develop/aurora-minds/frontend
+cd /home/sonwerik/Develop/apollo/frontend
 
 # Carrega nvm
 export NVM_DIR="$HOME/.nvm"

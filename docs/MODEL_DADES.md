@@ -1,10 +1,10 @@
 # Model de Dades
 
-Aquest document descriu l'esquema de la base de dades de QuietSignal, incloent les taules, relacions i restriccions.
+Aquest document descriu l'esquema de la base de dades de Apol·lo, incloent les taules, relacions i restriccions.
 
 ## Visio General
 
-QuietSignal utilitza MySQL com a sistema de gestio de bases de dades relacional. L'esquema esta dissenyat per suportar usuaris, diaris, entrades i resums emocionals.
+Apol·lo utilitza MySQL com a sistema de gestio de bases de dades relacional. L'esquema esta dissenyat per suportar usuaris, diaris, entrades i resums emocionals.
 
 ## Diagrama Entitat-Relacio
 
@@ -199,7 +199,7 @@ users (1) -------- (N) mood_summaries
 ### Creacio de la Base de Dades
 
 ```sql
-CREATE DATABASE IF NOT EXISTS quietsignal
+CREATE DATABASE IF NOT EXISTS apollo
 CHARACTER SET utf8mb4
 COLLATE utf8mb4_unicode_ci;
 ```

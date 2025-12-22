@@ -1,6 +1,6 @@
 # Guia d'Installacio
 
-Aquest document proporciona instruccions detallades per configurar i executar QuietSignal en un entorn de desenvolupament local.
+Aquest document proporciona instruccions detallades per configurar i executar Apol·lo en un entorn de desenvolupament local.
 
 ## Requisits del Sistema
 
@@ -53,9 +53,9 @@ Aixo creara automaticament un entorn virtual i installara totes les dependencies
 #### Crear la Base de Dades MySQL
 
 ```sql
-CREATE DATABASE quietsignal CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-CREATE USER 'quietsignal_user'@'localhost' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON quietsignal.* TO 'quietsignal_user'@'localhost';
+CREATE DATABASE apollo CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+CREATE USER 'apollo_user'@'localhost' IDENTIFIED BY 'your_password';
+GRANT ALL PRIVILEGES ON apollo.* TO 'apollo_user'@'localhost';
 FLUSH PRIVILEGES;
 ```
 
@@ -70,11 +70,11 @@ JWT_ALGORITHM=HS256
 ACCESS_TOKEN_EXPIRE_MINUTES=60
 
 # Configuracio MySQL
-MYSQL_USER=quietsignal_user
+MYSQL_USER=apollo_user
 MYSQL_PASSWORD=your_password
 MYSQL_HOST=localhost
 MYSQL_PORT=3306
-MYSQL_DB=quietsignal
+MYSQL_DB=apollo
 
 # Administrador (opcional)
 ADMIN_EMAIL=admin@example.com
@@ -95,7 +95,7 @@ Si no existeix, cal entrenar el model o obtenir-lo del repositori de dades.
 ### 7. Executar el Backend
 
 ```bash
-uv run uvicorn quietsignal_backend.main:app --reload
+uv run uvicorn apollo_backend.main:app --reload
 ```
 
 El servidor estara disponible a `http://localhost:8000`.
@@ -207,7 +207,7 @@ Solucio:
 
 ```bash
 # Backend (des del directori backend/)
-uv run uvicorn quietsignal_backend.main:app --reload
+uv run uvicorn apollo_backend.main:app --reload
 
 # Frontend (des del directori frontend/)
 npm run dev
@@ -217,7 +217,7 @@ npm run dev
 
 ```bash
 # Backend
-uv run uvicorn quietsignal_backend.main:app --host 0.0.0.0 --port 8000
+uv run uvicorn apollo_backend.main:app --host 0.0.0.0 --port 8000
 
 # Frontend
 npm run build

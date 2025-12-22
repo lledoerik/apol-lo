@@ -1,6 +1,6 @@
 # Documentacio de l'API
 
-Aquest document descriu tots els endpoints disponibles a l'API de QuietSignal.
+Aquest document descriu tots els endpoints disponibles a l'API d'Apol·lo.
 
 ## Informacio General
 
@@ -36,7 +36,7 @@ Verifica l'estat del servidor.
 ```json
 {
   "status": "ok",
-  "message": "QuietSignal API is running"
+  "message": "Apol·lo API is running"
 }
 ```
 
