@@ -1,0 +1,42 @@
+[project]
+name = "apollo-backend"
+version = "0.1.0"
+description = "Backend per Apol·lo - diari emocional"
+readme = "README.md"
+authors = [
+    { name = "Alvaro Silva", email = "102283382+BabyScylla69@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi",
+    "uvicorn[standard]",
+    "python-dotenv",
+    "passlib[bcrypt]",
+    "PyJWT",
+    "joblib",
+    "scikit-learn",
+    "sqlalchemy",
+    "pymysql>=1.1.2",
+    "python-multipart>=0.0.20",
+    "pydantic-settings>=2.12.0",
+    "jose>=1.0.0",
+    "mysql-connector-python>=9.5.0",
+    "pydantic[email]>=2.12.5",
+    "pandas",
+    "transformers",
+    "torch",
+    "sentencepiece",
+    "psycopg2-binary>=2.9.9",
+    "gunicorn>=21.0.0",
+]
+
+# Tell uv/setuptools where the package lives
+[tool.uv]
+package = true
+
+[tool.uv.sources]
+apollo-backend = { path = "." }
+
+[build-system]
+requires = ["uv_build>=0.9.11,<0.10.0"]
+build-backend = "uv_build"
