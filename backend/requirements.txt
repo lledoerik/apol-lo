@@ -13,8 +13,6 @@ jose>=1.0.0
 mysql-connector-python>=9.5.0
 pydantic[email]>=2.12.5
 pandas
-transformers
-torch
-sentencepiece
+httpx
 psycopg2-binary>=2.9.9
 gunicorn>=21.0.0
