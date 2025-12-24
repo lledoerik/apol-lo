@@ -48,12 +48,13 @@ def login(response: Response, login_data: LoginRequestDTO, db: Session = Depends
 
         token, user = result
 
+        # secure=True i samesite="none" per funcionar entre dominis (cross-origin)
         response.set_cookie(
             key="access_token",
             value=token,
             httponly=True,
-            secure=False,
-            samesite="lax",
+            secure=True,
+            samesite="none",
             max_age=60 * 60 * 24,
         )
 
